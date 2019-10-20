@@ -1,0 +1,86 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+main .text-sec {
+  margin: 5% auto;
+}
+
+main .text-sec h1 {
+  font-family: sans-serif;
+}
+
+main .form-sec {
+  width: 100%;
+}
+
+main .form-sec form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30%;
+  margin: auto 35%;
+  font-family: sans-serif;
+}
+
+main .form-sec form input {
+  padding: 10px 15px 10px 15px;
+  margin-bottom: 8%;
+  border-radius: 5px;
+  border: 1px solid red;
+  outline: none;
+}
+
+main .form-sec form input:focus {
+  border: 1px dashed red;
+}
+
+main .form-sec form button {
+  width: 50%;
+  margin: auto 25%;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+main .task-view {
+  background-color: transparent;
+  width: 50%;
+  margin-top: 5%;
+  border-radius: 5px;
+  border: 1px solid skyblue;
+  font-family: sans-serif;
+}
+
+main .task-view p {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px dashed skyblue;
+}
+
+main .task-view p:last-child {
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */
