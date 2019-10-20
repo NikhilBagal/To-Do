@@ -53,13 +53,20 @@ main {
         border-radius: 5px;
         border: 1px solid skyblue;
         font-family: sans-serif;
+        
         p {
             padding: 10px;
             text-align: center;
             border-bottom: 1px dashed skyblue;
+            width: 90%;
+            float: left;
         }
         p:last-child {
             border: none;
+        }
+        input {
+            padding: 10px;
+            float: right;
         }
     }
     

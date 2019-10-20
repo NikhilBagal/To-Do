@@ -16,10 +16,11 @@ function update(){
 }
 console.log(list[0]);*/
 
+
 function update(){
   event.preventDefault();
   var val = inputElement.value;
   list.push(val);
-  element.innerHTML += "<p>"+val+"</p>";
+  element.innerHTML += "<p>"+list[list.length-1]+"</p>"+"<input type='checkBox'>";
 }
 

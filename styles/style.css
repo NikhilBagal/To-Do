@@ -78,9 +78,16 @@ main .task-view p {
   padding: 10px;
   text-align: center;
   border-bottom: 1px dashed skyblue;
+  width: 90%;
+  float: left;
 }
 
 main .task-view p:last-child {
   border: none;
+}
+
+main .task-view input {
+  padding: 10px;
+  float: right;
 }
 /*# sourceMappingURL=style.css.map */
