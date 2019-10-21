@@ -74,20 +74,80 @@ main .task-view {
   font-family: sans-serif;
 }
 
-main .task-view p {
-  padding: 10px;
-  text-align: center;
+main .task-view .tasks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  line-height: 45px;
   border-bottom: 1px dashed skyblue;
-  width: 90%;
-  float: left;
+  position: relative;
 }
 
-main .task-view p:last-child {
+main .task-view .tasks p {
+  text-align: center;
+  width: 85%;
+}
+
+main .task-view .tasks input {
+  position: absolute;
+  opacity: 1;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  top: 10px;
+  left: 88%;
+}
+
+main .task-view .tasks span i {
+  position: absolute;
+  cursor: pointer;
+  font-size: 25px;
+  top: 9px;
+  left: 95%;
+}
+
+main .task-view .tasks .line {
+  position: absolute;
+  width: 85%;
+  left: 2%;
+}
+
+main .task-view .tasks .line hr {
+  position: absolute;
+  background-color: grey;
+  border: none;
+  height: 1px;
+  width: 100%;
+  top: 22px;
+  display: none;
+}
+
+main .task-view .tasks input:checked ~ span hr {
+  display: block;
+}
+
+main .task-view .tasks:last-child {
   border: none;
 }
 
-main .task-view input {
-  padding: 10px;
-  float: right;
+main .tasks.deleted {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  main .task-view {
+    width: 80%;
+    margin: 5% 10% auto 10%;
+  }
+  main .task-view .tasks p {
+    width: 70%;
+  }
+  main .task-view .tasks input {
+    left: 75%;
+  }
+  main .task-view .tasks span i {
+    left: 90%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
