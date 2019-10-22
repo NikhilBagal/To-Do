@@ -16,10 +16,13 @@ function addElement(elementTag,elementClass){
   var newElement = document.createElement(elementTag);
   newElement.className = elementClass;
   var all = innerChilds();
-  newElement.appendChild(all[0]);
+  for(var i =0;i<all.length;i++){
+    newElement.appendChild(all[i]);
+  }
+ /* newElement.appendChild(all[0]);
   newElement.appendChild(all[1]);
   newElement.appendChild(all[2]);
-  newElement.appendChild(all[3]);
+  newElement.appendChild(all[3]);*/
   return newElement;
 }
 function innerChilds(){
