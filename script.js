@@ -5,10 +5,12 @@ function update(){
   event.preventDefault();
   var val = inputElement.value;
   list.push(val);
-  //element.innerHTML += "<p>"+list[list.length-1]+"</p>"+"<input type='checkBox'>";
-  element.innerHTML += "<div class='tasks'>"+"<p>"+list[list.length-1]+"</p>"+
+  inputElement.value = "";
+  if(val !== ""){
+    element.innerHTML += "<div class='tasks' id="+list.indexOf(val)+">"+"<p>"+list[list.length-1]+"</p>"+
   "<input type='checkbox' name='chk'>"+"<span>"+
   "<i class='fa fa-trash' aria-hidden='true'></i>"+"</span>"+"<span class='line'><hr></span>";
+  }
   del();
 }
 function del(){
@@ -19,6 +21,4 @@ function del(){
       selectedElement.parentNode.parentNode.classList.add("deleted");
     })
   }
-  
- // console.log(element);
 }

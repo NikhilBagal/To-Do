@@ -3,7 +3,17 @@
   padding: 0%;
 }
 
+body {
+  background: #0f0c29;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#24243e), color-stop(#302b63), to(#0f0c29));
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 main {
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,12 +125,16 @@ main .task-view .tasks .line {
 
 main .task-view .tasks .line hr {
   position: absolute;
-  background-color: grey;
+  background-color: #fff;
   border: none;
   height: 1px;
   width: 100%;
   top: 22px;
   display: none;
+}
+
+main .task-view .tasks .line hr.active {
+  display: block;
 }
 
 main .task-view .tasks input:checked ~ span hr {
@@ -136,6 +150,13 @@ main .tasks.deleted {
 }
 
 @media only screen and (max-width: 800px) {
+  main .form-sec form {
+    width: 80%;
+    margin: auto 10%;
+  }
+  main .form-sec form input {
+    text-align: center;
+  }
   main .task-view {
     width: 80%;
     margin: 5% 10% auto 10%;
@@ -148,6 +169,9 @@ main .tasks.deleted {
   }
   main .task-view .tasks span i {
     left: 90%;
+  }
+  main .task-view .tasks .line {
+    width: 70%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,11 +2,20 @@
     margin: 0%;
     padding: 0%;
 }
+body {
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+    
+}
 main {
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     width: 100%;
     height: 100vh;
     .text-sec {
@@ -17,7 +26,6 @@ main {
     }
     .form-sec {
         width: 100%;
-        
         form {
             display: flex;
             flex-direction: column;
@@ -29,8 +37,7 @@ main {
                 margin-bottom: 8%;
                 border-radius: 5px;
                 border: 1px solid red;
-                outline: none;
-                
+                outline: none;  
             }
             input:focus {
                 border: 1px dashed red;
@@ -88,12 +95,16 @@ main {
                 left: 2%;
                 hr {
                     position: absolute;
-                    background-color: grey;
+                    background-color: #fff;
                     border: none;
                     height: 1px;
                     width: 100%;
                     top: 22px;
                     display: none;
+                    
+                }
+                hr.active {
+                    display: block;
                 }
             }
             input:checked ~ span hr {
@@ -110,6 +121,15 @@ main {
 }
 @media only screen and (max-width:800px){
     main {
+        .form-sec {
+            form {
+                width: 80%;
+                margin: auto 10%;
+                input {
+                    text-align: center;
+                }
+            }
+        }
         .task-view {
             width: 80%;
             margin: 5% 10% auto 10%;
